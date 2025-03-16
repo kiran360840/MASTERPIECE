@@ -15,6 +15,7 @@ header{
     background-color: black;
     color: white;
     justify-content: space-between;
+    position: relative;
 }
 ul{
     display: inline;
@@ -39,6 +40,7 @@ ul{
     border: 0;
     background-color: #00B1CC;
     display: none;
+    cursor: pointer;
 }
 .nav{
     font-weight: bold;
@@ -61,6 +63,7 @@ ul{
     border: 0;
     border-radius: 5px;
     font-size: 16px;
+    margin-right: 15px;
 }
 .nav-sub:hover{
     background-color: #0191a7;
@@ -72,17 +75,18 @@ ul{
     transition: 1s background-color ease;
 }
 .open{
+    position: absolute;
     width: 35%;
     height: 85vh;
     background-color: black;
     display: none;
-    transform: translateX(-600px);
-    transition: 1s transform ease;
+    left: -600px;
 }
 .slide-in{
-    display: inline-block;
-    transform: translateX(0px);
-    transition: 1s transform ease;
+    display: block;
+    left: 0px;
+    overflow: hidden;
+    z-index: 1;
 }
 .nav-res{
     display: flex;
@@ -107,24 +111,24 @@ footer{
 @media screen and (max-width: 760px) {
     .select-btn{
         display: block;
-        flex-basis: 11%;
+        flex-basis: 15%;
         margin-left: 10px;
         font-size: 100%;
         font-weight: bold;
-        height: 30px;
+        height: 35px;
     }
     .content-box{
         display: none;
     }
     .nav-head{
-        margin-left: 0;
+        margin-left: 5px;
         flex-basis: 70%;
     }
     .nav-res{
        padding-top: 20px; 
     }
     .open{
-        height: 100vh;
+        height: 90vh;
     }
     footer{
         font-size: 15px;
